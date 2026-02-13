@@ -59,6 +59,7 @@ ASP.NET Core MVC frontend application that consumes the API.
 ## How to run the project
 
 The project needs to be run in 2 separate terminals - one for UI and one for API. 
+Make sure you have .NET installed, this can be done by https://dotnet.microsoft.com/en-us/download/dotnet/8.0
 
 #### Terminal 1:
 
