@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnicalAssessment", "TechnicalAssessment\TechnicalAssessment.csproj", "{9DB5A310-B1A8-4098-8D7C-FED36DD1ED96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnicalAssessment.API", "TechnicalAssessment.API\TechnicalAssessment.API.csproj", "{9DB5A310-B1A8-4098-8D7C-FED36DD1ED96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnicalAssessment.UI", "TechnicalAssessment.UI\TechnicalAssessment.UI.csproj", "{FBA4859F-371F-407D-B6B3-75A4207E1AC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +20,9 @@ Global
 		{9DB5A310-B1A8-4098-8D7C-FED36DD1ED96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DB5A310-B1A8-4098-8D7C-FED36DD1ED96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DB5A310-B1A8-4098-8D7C-FED36DD1ED96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBA4859F-371F-407D-B6B3-75A4207E1AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBA4859F-371F-407D-B6B3-75A4207E1AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBA4859F-371F-407D-B6B3-75A4207E1AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBA4859F-371F-407D-B6B3-75A4207E1AC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

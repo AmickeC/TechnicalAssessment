@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\TechnicalAssessment.UI.props" />
+</Project>
