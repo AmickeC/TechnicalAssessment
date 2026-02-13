@@ -55,11 +55,20 @@ ASP.NET Core MVC frontend application that consumes the API.
 2. Entity Framework Core used as the ORM to interface with the database
 3. DTOs used to improve maintainability - used to define types of objects passed to APIs
 4. Separate API and UI - makes the two components more independent and reduces risk of database exposure since no direct access to database from UI
+5. Email validation implemented for creating and updating users to prevent duplicate email entries in the database.
+
 
 ## How to run the project
 
 The project needs to be run in 2 separate terminals - one for UI and one for API. 
-Make sure you have .NET installed, this can be done by https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+
+Prerequisites:
+* Make sure you have .NET version 8 installed, this can be done by https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+
+Steps:
+* Open the TechnicalAssessment.API.csproj file and update the `<TargetFramework>` tag to use .NET 8:
+`<TargetFramework>net8.0</TargetFramework>`
+* Open two terminal windows and run these commands
 
 #### Terminal 1:
 
