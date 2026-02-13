@@ -57,14 +57,29 @@ ASP.NET Core MVC frontend application that consumes the API.
 4. Separate API and UI - makes the two components more independent and reduces risk of database exposure since no direct access to database from UI
 
 ## How to run the project
-The project needs to be run in 2 separate terminals - one for UI and one for API.
-Terminal 1:
+
+The project needs to be run in 2 separate terminals - one for UI and one for API. 
+
+#### Terminal 1:
+
 `cd TechnicalAssessment.API`
+
 `dotnet run`
+
 This exposes the API at http://locahost:5244/api.
+
 Swagger UI is available at http://localhost:5244/swagger
 
-Terminal 2
+
+#### Terminal 2:
+
 `cd TechnicalAssessment.UI`
+
 `dotnet run`
+
 This exposes the UI at http://localhost:5204.
+
+## Notes
+
+Features not included due to limited time
+1. Unit tests
