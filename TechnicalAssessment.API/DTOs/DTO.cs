@@ -3,21 +3,23 @@ namespace TechnicalAssessment.DTOs
     public class PermissionDto
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public required string Name { get; set; }
     }
 
     public class GroupDto
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public required string Name { get; set; }
         public List<PermissionDto> Permissions { get; set; } = new();
+
+        public int UserCount { get; set; }
     }
 
     public class UserDto
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
+        public required string Name { get; set; }
+        public required string Email { get; set; }
         public List<GroupDto> Groups { get; set; } = new();
     }
 

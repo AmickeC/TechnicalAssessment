@@ -2,7 +2,8 @@
 
 @{
     ViewData["Title"] = "Edit User";
-    var groups = ViewBag.Groups as List<TechnicalAssessment.UI.Models.GroupDto> ?? new List<TechnicalAssessment.UI.Models.GroupDto>();
+    var groups = ViewBag.Groups as List<TechnicalAssessment.UI.Models.GroupDto> 
+                 ?? new List<TechnicalAssessment.UI.Models.GroupDto>();
 }
 
 <h2>Edit User</h2>
@@ -24,15 +25,22 @@
 
     <div class="mb-3">
         <label class="form-label">Groups</label>
-        <select asp-for="GroupIds" class="form-select" multiple>
+        <div>
             @foreach (var group in groups)
             {
-                <option value="@group.Id" 
-                        selected="@(Model.GroupIds.Contains(group.Id))">
-                    @group.Name
-                </option>
+                <div class="form-check">
+                    <input class="form-check-input"
+                           type="checkbox"
+                           name="GroupIds"
+                           value="@group.Id"
+                           id="group_@group.Id"
+                           @(Model.GroupIds != null && Model.GroupIds.Contains(group.Id) ? "checked" : "") />
+                    <label class="form-check-label" for="group_@group.Id">
+                        @group.Name
+                    </label>
+                </div>
             }
-        </select>
+        </div>
     </div>
 
     <button type="submit" class="btn btn-warning">Update User</button>

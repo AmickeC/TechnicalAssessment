@@ -30,7 +30,8 @@ public class GroupsController : ControllerBase
                 Name = g.Name,
                 Permissions = g.Permissions
                     .Select(p => new PermissionDto { Id = p.Id, Name = p.Name })
-                    .ToList()
+                    .ToList(),
+                UserCount = g.Users.Count()
             })
             .ToListAsync();
 
@@ -58,4 +59,19 @@ public class GroupsController : ControllerBase
 
         return Ok(group);
     }
+
+    // GET: api/groups/{groupId}/users/count
+    [HttpGet("{groupId}/users/count")]
+    public async Task<IActionResult> GetUsersCountPerGroup(int groupId)
+    {
+        var group = await _context.Groups
+            .Include(g => g.Users)
+            .FirstOrDefaultAsync(g => g.Id == groupId);
+
+        if (group == null) return NotFound();
+
+        var count = group.Users.Count;
+        return Ok(new { GroupId = groupId, Count = count });
+    }
+
 }
